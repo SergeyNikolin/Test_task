@@ -53,8 +53,8 @@ public class Main {
         else if (romanToArabic.containsKey(arrayOfElements[0]) ^ romanToArabic.containsKey(arrayOfElements[2])){
             throw new Exception();
         }
-        else if ((Integer.parseInt(arrayOfElements[0]) < 1) || (Integer.parseInt(arrayOfElements[0]) > 10) ||
-                (Integer.parseInt(arrayOfElements[2]) < 1) || (Integer.parseInt(arrayOfElements[2]) > 10)) {
+        else if (((isInteger(arrayOfElements[0]) && Integer.parseInt(arrayOfElements[0]) < 1) || (isInteger(arrayOfElements[0]) && Integer.parseInt(arrayOfElements[0]) > 10)) ||
+        ((isInteger(arrayOfElements[2]) && Integer.parseInt(arrayOfElements[2]) < 1) || (isInteger(arrayOfElements[2]) && Integer.parseInt(arrayOfElements[2]) > 10))) {
             throw new Exception();
         }
 
